@@ -22,7 +22,10 @@ function lower(str) {
 }
 
 const updateAnimal = (arr, callback) => {
-  // Solution code here...
+  let newArr = arr.map((item) =>{
+    return callback(item);
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,7 +37,15 @@ For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
 const sortNames = (arr) => {
-  // Solution code here...
+  let newArr = arr.sort((a, b) =>{
+    if(a > b){
+      return 1;
+    }
+    else if (a < b){
+      return -1;
+    }
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,8 +57,17 @@ HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbers = (arr) => {
-  // Solution code here...
-};
+    let newArr = arr.sort((a, b) => {
+      if (a > b){
+        return 1;
+      } else if (a < b){
+        return -1;
+      } else {
+        return 0;
+      }
+   });
+   return newArr;
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -58,7 +78,16 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
+  let newArr = arr.sort((a, b) => {
+    if (a > b){
+      return -1;
+    } else if (a < b){
+      return 1;
+    } else {
+      return 0;
+    }
+ });
+ return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -71,9 +100,17 @@ In this alphabetization, capital letters come before lower case letters.
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
-const alphabetize = (arr) => {
-  // Solution code here...
-};
+  const alphabetize = (arr) => {
+    let newArr = arr.sort((a, b) => {
+      if (a > b) {
+        return 1;
+      }
+      if (a < b) {
+        return -1;
+      }
+    });
+    return newAarr;
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -88,9 +125,12 @@ Here is an example of the input:
 ];
 ------------------------------------------------------------------------------------------------ */
 
-const sortByPrice = (arr) => {
-  // Solution code here...
-};
+  const sortByPrice = (arr) => {
+    let newArr = arr.sort((a, b) => {
+      return a.price - b.price;
+    });
+    return newArr;
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
