@@ -109,7 +109,7 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
         return -1;
       }
     });
-    return newAarr;
+    return newArr;
   };
 
 /* ------------------------------------------------------------------------------------------------
