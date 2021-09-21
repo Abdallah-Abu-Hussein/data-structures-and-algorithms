@@ -24,7 +24,7 @@ const getNames = (arr) => {
     let nameArr = object.name.split('');
     let reversed = nameArr.reduce((acc,cur)=> cur+acc, '');
     return reversed;
-  })
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
