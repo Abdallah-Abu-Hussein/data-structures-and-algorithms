@@ -17,7 +17,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
-  // Solution code here...
+  // Solution code here...challenge
   return arr.map((firstChar) => {
     return firstChar[0];
   });
